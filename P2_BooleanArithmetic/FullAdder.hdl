@@ -3,7 +3,7 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/2/FullAdder.hdl
 /**
- * Computes the sum of three bits.
+ * Computes the sum of three bits using OR & .
  */
 CHIP FullAdder {
     IN a, b, c;  // 1-bit inputs
@@ -11,5 +11,7 @@ CHIP FullAdder {
         carry;   // Left bit of a + b + c
 
     PARTS:
-    //// Replace this comment with your code.
+    HalfAdder(a=a , b=b , sum=halfAddSum1 , carry=halfAddCarry1 );    
+    HalfAdder(a=halfAddSum1 , b=c , sum=sum , carry=halfAddCarry2 );
+    Or(a=halfAddCarry1 , b=halfAddCarry2 , out=carry );
 }

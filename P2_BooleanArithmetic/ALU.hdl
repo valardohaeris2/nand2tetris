@@ -61,4 +61,8 @@ CHIP ALU {
    Mux16(a=fOut, b=fNotOut, sel=no, out=out, out[15]=ng, out[0..7]=zrLow, out[8..15]=zrHigh);
 
    // ZR flag
+   Or8Way(in=zrLow, out=or1Out);
+   Or8Way(in=zrHigh, out=or2Out);
+   Or(a=or1Out, b=or2Out, out=or3Out);
+   Not(in=or3Out, out=zr);
 }

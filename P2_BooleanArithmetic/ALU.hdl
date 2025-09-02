@@ -52,5 +52,7 @@ CHIP ALU {
    Mux16(a=yMux, b=notY, sel=ny, out=readyY);
 
    // f control bit
-   
+   And16(a=readyX, b=readyY, out=andOut);
+   And16(a=readyX, b=readyY, out=addOut);
+   Mux16(a=andOut, b=addOut, sel=f, out=fOut);
 }

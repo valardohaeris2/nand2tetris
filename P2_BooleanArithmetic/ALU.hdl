@@ -55,4 +55,10 @@ CHIP ALU {
    And16(a=readyX, b=readyY, out=andOut);
    And16(a=readyX, b=readyY, out=addOut);
    Mux16(a=andOut, b=addOut, sel=f, out=fOut);
+
+   // NO control bit
+   Not16(in=fOut, out=fNotOut);
+   Mux16(a=fOut, b=fNotOut, sel=no, out=out, out[15]=ng, out[0..7]=zrLow, out[8..15]=zrHigh);
+
+   // ZR flag
 }

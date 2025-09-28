@@ -28,5 +28,4 @@ CHIP Memory {
   
 	RAM16K(in=, load=dmuxOut, address=, out=ramOut);
     Screen(in=, load=dmuxOut, address=, out=screenOut);
- 
 }

@@ -16,7 +16,7 @@
  * Note: The outM and writeM outputs are combinational: they are affected by the
  * instruction's execution during the current cycle. The addressM and pc outputs are
  * clocked: although they are affected by the instruction's execution, they commit to
- * their new values only in the next cycle
+ * their new values only in the next cycle. 
  */
 CHIP CPU {
 

@@ -33,5 +33,5 @@ CHIP CPU {
         pc[15];          // address of next instruction
 
     PARTS:
-	RAM16K  
+
 }

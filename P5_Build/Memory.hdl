@@ -26,7 +26,8 @@ CHIP Memory {
 
     PARTS:
     
-	RAM16K(in=, load=dmuxOut, address=, out=ramOut);
-    Screen(in=, load=dmuxOut, address=, out=screenOut);
+    
+	RAM16K(in=in, load=dmuxOut, address=, out=ramOut);
+    Screen(in=in, load=dmuxOut, address=, out=screenOut);
     Keyboard(out=keybd);
 }

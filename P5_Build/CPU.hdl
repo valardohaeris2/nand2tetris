@@ -36,5 +36,5 @@ CHIP CPU {
 
     ALU(x=, y=, zx=, nx=, zy=, ny=, f=, no=, out=, zr=, ng=);
     ARegister(in=, load=, out=);
-    DRegister(in=, load=, out=);
+    DRegister(in=, load=, out=)
 }

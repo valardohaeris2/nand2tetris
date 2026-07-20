@@ -3,7 +3,7 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/1/DMux.hdl
 /**
- * Demultiplexor:
+ * DEMUX:
  * [a, b] = [in, 0] if sel = 0
  *          [0, in] if sel = 1
  */

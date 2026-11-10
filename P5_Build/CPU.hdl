@@ -38,7 +38,9 @@ CHIP CPU {
         b=instruction,
         sel=instruction[15],
         out[0]=...,
-        out[1]=...,)
+        out[1]=...,
+        out[2]=...,
+        out[3]=..,):
     ALU(x=, y=, zx=, nx=, zy=, ny=, f=, no=, out=, zr=, ng=):
     ARegister(in=, load=, out=);
     DRegister(in=, load=, out=);

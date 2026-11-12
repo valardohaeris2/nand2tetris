@@ -54,7 +54,7 @@ CHIP CPU {
         out[14]=...,
         out[15]=...,
     );
-    ALU(x=, y=, zx=, nx=, zy=, ny=, f=, no=, out=, zr=, ng=):
+    ALU(x=In, y=In, zx=, nx=, zy=, ny=, f=, no=, out=, zr=, ng=):
     ARegister(in=, load=, out=);
     DRegister(in=, load=, out=);
 

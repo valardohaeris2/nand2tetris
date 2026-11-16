@@ -62,5 +62,14 @@ CHIP CPU {
 
     DRegister(in=aluOut, load=destD, out=dOut);
 
-    PC(in=, load=, inc=, reset=, out=);
+    PC(in=aOut, load=jump, inc=true, reset=reset, out=[0..14]=pc);
+
+   # Or(a=zr, b=ng, out=zrOrNg);
+   # Not(in=zrOrNg, out=pos);           // positive = not zero and not negative
+   # And(a=jlt, b=ng,  out=j1);
+   # And(a=jeq, b=zr,  out=j2);
+   # And(a=jgt, b=pos, out=j3);
+   # Or(a=j1, b=j2, out=j12);
+   # Or(a=j12, b=j3, out=jump);
+
 }

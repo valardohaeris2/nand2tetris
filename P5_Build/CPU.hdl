@@ -54,6 +54,8 @@ CHIP CPU {
         out[15]=isC,
     );
     ALU(x=dOut, y=aOrM, zx=zx, nx=nx, zy=zy, ny=ny, f=f, no=no, out=aluOut, out=outM, zr=zr, ng=ng):
+    
+    Mux16(a=instruction, b=aluOut, sel=isC, out=aIn);
     ARegister(in=, load=, out=);
     DRegister(in=, load=, out=);
 

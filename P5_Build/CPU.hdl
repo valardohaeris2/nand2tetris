@@ -59,8 +59,8 @@ CHIP CPU {
     Not(in=isC, out=isA);
     Or(a=isA, b=destA, out=loadA);
     ARegister(in=aIn, load=loadA, out=aOut, out[0..14]=addressM);
-    
-    DRegister(in=, load=, out=);
+
+    DRegister(in=aluOut, load=destD, out=dOut);
 
     PC(in=, load=, inc=, reset=, out=);
 }

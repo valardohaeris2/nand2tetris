@@ -70,5 +70,5 @@ CHIP CPU {
     And(a=jeq, b=zr,  out=j2);
     And(a=jgt, b=pos, out=j3);
     Or(a=j1, b=j2, out=j12);
-    Or(a=j12, b=j3, out=jump);
+    Or(a=j12, b=j3, out=jump2);
 }

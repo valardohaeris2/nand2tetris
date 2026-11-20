@@ -18,5 +18,5 @@ CHIP Computer {
     IN reset;
 
     PARTS:
-    
+    ROM32K(address=pcOut, out=romOut); 
 }
